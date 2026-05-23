@@ -1,0 +1,6 @@
+{
+  "name": "Educational Portal with Admin Panel",
+  "description": "An interactive educational platform with an AI-powered course generator, structured lessons, interactive quizzes, student progress tracking, and a comprehensive admin dashboard.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

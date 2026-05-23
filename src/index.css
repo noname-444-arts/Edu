@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+/* International School Academy — design system */
+@theme {
+  --color-isa-navy: #0f2744;
+  --color-isa-navy-mid: #1a3a5c;
+  --color-isa-navy-soft: #2a4d73;
+  --color-isa-gold: #c9a227;
+  --color-isa-gold-light: #e8d48a;
+  --color-isa-gold-pale: #f5edd4;
+  --color-isa-cream: #f8f6f1;
+  --color-isa-cream-dark: #ebe6dc;
+  --color-isa-surface: #ffffff;
+  --color-isa-text: #1a2a3a;
+  --color-isa-muted: #5c6b7a;
+  --color-isa-border: #d9d0c3;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+
+:root {
+  --isa-navy: #0f2744;
+  --isa-gold: #c9a227;
+  --isa-cream: #f8f6f1;
+}
+
+body {
+  background-color: var(--isa-cream);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(201, 162, 39, 0.08), transparent),
+    linear-gradient(180deg, var(--isa-cream) 0%, #f0ebe3 100%);
+  color: var(--isa-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* School shell */
+.isa-school-header {
+  background: linear-gradient(135deg, #0f2744 0%, #1a3a5c 55%, #0f2744 100%);
+  color: #fff;
+  border-bottom: 3px solid var(--isa-gold);
+  box-shadow: 0 4px 20px rgba(15, 39, 68, 0.25);
+}
+
+.isa-school-header__gold-rule {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c9a227, #e8d48a, #c9a227, transparent);
+}
+
+.isa-school-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.isa-school-subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--isa-gold-light);
+  font-weight: 600;
+}
+
+.isa-crest {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #c9a227, #a6851f);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards & UI (wellness-* kept as aliases for compatibility) */
+.wellness-card,
+.isa-card {
+  background: var(--isa-surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(15, 39, 68, 0.06);
+  border: 1px solid var(--isa-border);
+}
+
+.wellness-card-soft,
+.isa-card-accent {
+  background: linear-gradient(145deg, #faf7f2 0%, var(--isa-gold-pale) 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+.wellness-shadow,
+.isa-shadow {
+  box-shadow: 0 8px 28px rgba(15, 39, 68, 0.1);
+}
+
+.wellness-btn-primary,
+.isa-btn-primary {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2744 100%);
+  color: #f5edd4;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.wellness-btn-primary:hover,
+.isa-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15, 39, 68, 0.35);
+}
+
+.wellness-nav-fab,
+.isa-nav-fab {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-top: -1.75rem;
+  background: linear-gradient(145deg, #c9a227 0%, #a6851f 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(201, 162, 39, 0.45);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f2744;
+}
+
+.isa-icon-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--isa-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  box-shadow: 0 2px 8px rgba(15, 39, 68, 0.06);
+}
+
+.isa-icon-btn:hover {
+  background: var(--isa-gold-pale);
+  border-color: rgba(201, 162, 39, 0.5);
+}
+
+.isa-icon-btn--chat {
+  color: #1a3a5c;
+}
+
+.isa-icon-btn--trophy {
+  color: var(--isa-gold);
+}
+
+.isa-section-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--isa-navy-mid);
+}
+
+.isa-badge-gold {
+  display: inline-block;
+  background: var(--isa-gold-pale);
+  color: #7a5f10;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wellness-progress-ring {
+  background: conic-gradient(
+    var(--isa-gold) calc(var(--progress, 0) * 1%),
+    var(--isa-cream-dark) 0
+  );
+  border-radius: 50%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--isa-navy-mid) !important;
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.2);
+}
+
+/* Bottom nav active state */
+.isa-nav-item--active {
+  color: var(--isa-navy) !important;
+  background: var(--isa-gold-pale);
+}
+
+/* Events strip — school bulletin style */
+.isa-events-strip {
+  background: linear-gradient(135deg, #faf7f2 0%, #f5edd4 100%);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  border-left: 4px solid var(--isa-gold);
+}
+
+/* Lessons CTA card */
+.isa-lessons-cta {
+  background: linear-gradient(160deg, #1a3a5c 0%, #0f2744 100%);
+  color: #f5edd4;
+  border: 2px solid rgba(201, 162, 39, 0.45);
+}
+
+.isa-lessons-cta span {
+  color: rgba(245, 237, 212, 0.85);
+}
+
+/* Profile header — wallet & market */
+.isa-wallet-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  border-radius: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.isa-wallet-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--isa-gold);
+}
+
+.isa-market-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(145deg, #c9a227, #a6851f);
+  color: #0f2744;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s;
+}
+
+.isa-market-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Home YouTube Shorts strip */
+.isa-shorts-row {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.isa-shorts-row::-webkit-scrollbar {
+  display: none;
+}
+
+.isa-short-cell iframe {
+  pointer-events: auto;
+}
